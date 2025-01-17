@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EjemploController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ejemplo', [EjemploController::class, "mostrarDatos"]);
+Route::get('/usuarios', [UsuarioController::class, "mostrarDatos"]);

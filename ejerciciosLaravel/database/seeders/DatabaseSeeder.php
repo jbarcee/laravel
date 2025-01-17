@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Categoria;
 use App\Models\Comentario;
+use App\Models\Ejemplo;
 use App\Models\Pedido;
 use App\Models\Producto;
 use App\Models\Usuario;
@@ -30,11 +31,12 @@ class DatabaseSeeder extends Seeder
         //$this->call([UsuariosTableSeeder::class]);
         //$this->call([CategoriasTableSeeder::class]);
         //Categoria::factory(20)->create();
-        // Usuario::factory(10)->create();
+        Usuario::factory(20)->create();
         // Pedido::factory(2)->create();
         // Producto::factory(10)->create();
         // Comentario::factory(10)->create();
         // Categoria::factory(10)->create();
+        // Ejemplo::factory(20)->create();
 
         
 
