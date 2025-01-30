@@ -18,8 +18,8 @@ class ClienteFactory extends Factory
     {
         return [
             'nombre' => $this->faker->name(),
-            'email' => $this->faker->email(),
-            'telefono' =>$this->faker->phoneNumber()
+            'telefono' =>$this->faker->phoneNumber(),
+            'tarjeta_credito' => $this->faker->creditCardNumber(),
         ];
     }
 }
