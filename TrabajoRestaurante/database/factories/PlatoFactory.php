@@ -17,7 +17,8 @@ class PlatoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => $this->faker->word(),
+            'precio' => $this->faker->randomNumber(2, true)
         ];
     }
 }
