@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plato_Pedido extends Model
 {
-    private $idPlato;
-    private $idPedido;
+    protected $table = 'plato_pedido';
+    private $id_plato;
+    private $id_pedido;
+    protected $fillable = ['id_plato', 'id_pedido'];
 }

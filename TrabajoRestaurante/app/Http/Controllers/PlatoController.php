@@ -11,4 +11,13 @@ class PlatoController extends Controller
         $platos = Plato::paginate(5);
         return view('platos', ['platos'=>$platos]);
     }
+
+    public function addPlato(Request $request) {
+        session_start();
+        if (!isset($_SESSION['pedido'])) {
+            $_SESSION['pedido'] = [];
+        }
+        $_SESSION['pedido'][] = [(int) $request->idPlato, (int) $request->precioPlato];
+        return redirect()->route("platos",['page'=>$request->page]);
+    }
 }

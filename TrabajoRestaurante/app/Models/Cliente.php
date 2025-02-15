@@ -12,5 +12,7 @@ class Cliente extends Model
     private $id;
     private $nombre;
     private $telefono;
-    private $tarjetaCredito;
+    private $tarjeta_credito;
+
+    protected $fillable = ['nombre', 'telefono', 'tarjeta_credito'];
 }

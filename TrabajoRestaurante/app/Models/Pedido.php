@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     private $id;
-    private $precioTotal;
+    private $precio_total;
+    protected $fillable = ['precio_total'];
 }
