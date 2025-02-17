@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('plato_pedido', function (Blueprint $table) {
-            $table->integer('id_plato');
-            $table->integer('id_pedido');
+            $table->foreignId('id_plato')->constrained('platos');
+            $table->foreignId('id_pedido')->constrained('pedidos');
             $table->timestamps();
             $table->primary(['id_plato', 'id_pedido']);
         });

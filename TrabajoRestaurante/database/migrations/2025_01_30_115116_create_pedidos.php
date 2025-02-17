@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_cliente')->constrained('clientes');
             $table->double('precio_total');
             $table->timestamps();
         });

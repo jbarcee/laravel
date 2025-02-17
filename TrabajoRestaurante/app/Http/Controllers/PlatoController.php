@@ -15,9 +15,10 @@ class PlatoController extends Controller
     public function addPlato(Request $request) {
         session_start();
         if (!isset($_SESSION['pedido'])) {
-            $_SESSION['pedido'] = [];
+            $_SESSION['pedido'] = ['platos' => [], 'precioTotal' => 0];
         }
-        $_SESSION['pedido'][] = [(int) $request->idPlato, (int) $request->precioPlato];
+        $_SESSION['pedido']['platos'][] = (int) $request->idPlato;
+        $_SESSION['pedido']['precioTotal'] += (int) $request->precioPlato;
         return redirect()->route("platos",['page'=>$request->page]);
     }
 }

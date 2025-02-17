@@ -16,15 +16,16 @@ class FormularioClienteController extends Controller
         $precioTotal = 0;
         $validatedData = $request->validated();
         $idCliente = ClienteController::store($request->name, $request->phone, $request->card)->id;
-        $idPedido = PedidoController::store()->id;
-        foreach ($_SESSION['pedido'] as $plato) {
-            Plato_Pedido::create([
-                'id_plato' => $plato[0],
-                'id_pedido' => $idPedido
-            ]);
-            $precioTotal += $plato[1];
+        $idPedido = PedidoController::store($idCliente, $_SESSION['pedido']['precioTotal'])->id;
+        foreach ($_SESSION['pedido']['platos'] as $plato) {
+            try {
+                Plato_Pedido::create([
+                    'id_plato' => $plato,
+                    'id_pedido' => $idPedido
+                ]);
+            }
+            catch (\Exception $e) {}
         }
-        Pedido::where('id', $idPedido)->update(['precio_total' => $precioTotal]);
         
         return redirect()->route('finPedido');
            

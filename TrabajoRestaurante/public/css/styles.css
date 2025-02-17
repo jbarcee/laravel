@@ -1,0 +1,346 @@
+body {
+    background-color: #FFC3F2;
+}
+/*--- CSS INICIO ---*/
+.logo g{
+    fill: rgb(86, 0, 29);
+    transition: fill 0.2s ease-in;
+}
+
+.logo g .hovered {
+    fill: rgb(131, 0, 44);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.entrar {
+    margin-top: -400px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #FFC3F2;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 120;
+    color: rgb(131, 0, 44);
+}
+
+.entrar:hover {
+    background-color: rgb(131, 0, 44);
+    color: #FFC3F2;
+    
+}
+
+/*------*/
+
+/*--- CSS HEADER ---*/
+.header-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+}
+
+.header-navbar {
+    justify-content: space-between;
+    background-color: rgb(86, 0, 29);
+    padding: 0;
+    margin:0;
+    width: 100%;
+    display: flex;  
+}
+
+
+.header-navbar a {
+    padding: 0 25px;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 25px;
+    color: #FFC3F2;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.header-navbar a:hover {
+    background-color: #e6a5d8;
+    color: rgb(86, 0, 29);
+}
+
+
+/*--------------------*/
+
+/*CSS PLATOS*/
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #FFC3F2;
+    background-color: rgb(96, 0, 32);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.container-platos {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*background-color: green;*/
+    margin: 20px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.container-platos .plato:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fdd8f5;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(96, 0, 32);
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.footer button {
+    margin-left: auto;
+    right: 0;
+}
+
+.footer .name {
+    margin-left: auto;
+    color: #FFC3F2;
+    font-family: 'be Vietnam Pro', sans-serif;
+    align-items: center;
+    
+}
+
+.container-platos .plato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.2s ease-in;
+    
+    
+}
+
+.container-platos .plato h2 {
+    font-weight: 320;
+    font-size: 50px;
+}
+
+.container-platos .plato img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgb(96, 0, 32);
+    margin-bottom: 10px;
+}
+
+.container-platos .plato h4 {
+    font-weight: 650;
+}
+
+.añadir {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #FFC3F2;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    color: rgb(131, 0, 44);
+    transition: color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
+}
+
+.añadir:hover {
+    background-color: rgb(131, 0, 44);
+    color: #FFC3F2;
+    
+}
+
+.btn-pedido{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: rgb(96, 0, 32);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    border: 0;
+    padding: 10px 20px;
+    color: #FFC3F2;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in;
+}
+
+.btn-pedido:hover {
+    background-color: #FFC3F2;
+    color: rgb(96, 0, 32);
+}
+/*------------------------*/
+
+/*--- CSS EMPRESAS ---*/
+.empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+    transition: all 0.2s ease-in;
+    border-radius: 10px;
+    border: 0.1px solid #FFC3F2;
+    border-color: rgb(96, 0, 32);
+    
+
+}
+
+.empresa:hover {
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(96, 0, 32);
+    color: #FFC3F2;
+    border-color: #FFC3F2;
+}
+
+.empresas-container {
+    padding: 20px;
+    font-family: 'be Vietnam Pro', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px;
+}
+/*---------------------*/
+
+/*--- CSS FORM ---*/
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 20px;
+    font-family: 'be Vietnam Pro', sans-serif;
+}
+
+.form-container form input {
+    margin: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo del formulario */
+}
+
+.form-container form input[type="submit"] {
+    font-family: 'be Vietnam Pro', sans-serif;
+    background-color: rgb(96, 0, 32);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    border: 0;
+    padding: 10px 20px;
+    color: #FFC3F2;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in;
+    cursor: pointer;
+}
+
+.form-container form input, .form-container form textarea, .form-container form select {
+    font-family: 'be Vietnam Pro', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    padding: 10px;
+    border: 0;
+    background-color: #FFC3F2;
+    flex: 2;
+}
+
+.form-container form input[type="submit"]:hover {
+    background-color: #FFC3F2;
+    color: rgb(96, 0, 32);
+    border: 1px solid rgb(96, 0, 32);
+}
+
+.form-container form input[type="text"] {
+    border-bottom: 1px solid rgb(96, 0, 32);
+    color: rgb(86, 0, 29);
+}
+
+
+.form-container form select {
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.form-container form select:hover {
+    background-color: rgb(86, 0, 29);
+    color:#FFC3F2;
+    border: 1px solid rgb(86, 0, 29);
+}
+
+.form-container form label {
+    flex:1;
+    font-family: 'be Vietnam Pro', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    color: rgb(96, 0, 32);
+}
+
+/*-----------------*/
+
+/*--- CSS PEDIDOS ---*/
+
+
+/*-------------------*/
+
+.nav-fin button {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: rgb(96, 0, 32);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    border: 0;
+    padding: 10px 20px;
+    color: #FFC3F2;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in;
+    cursor: pointer;
+    width: 90%;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.nav-fin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    
+}

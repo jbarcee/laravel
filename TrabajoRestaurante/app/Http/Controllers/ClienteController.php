@@ -16,4 +16,9 @@ class ClienteController extends Controller
         ]);
         return $cliente;
     }
+
+    public function findName($id) {
+        $cliente = Cliente::find($id);
+        return $cliente->nombre;
+    }
 }

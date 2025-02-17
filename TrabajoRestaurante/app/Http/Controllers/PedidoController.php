@@ -12,10 +12,12 @@ class PedidoController extends Controller
         return view('pedidos', ['pedidos' => $pedidos]);
     }
 
-    public static function store($precioTotal = 0) {
+    public static function store($idCliente, $precioTotal = 0) {
         $pedido = Pedido::create([
+            'id_cliente' => $idCliente,
             'precio_total' => $precioTotal
         ]);
         return $pedido;
     }
+
 }

@@ -4,39 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platos</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    @if (!isset($_COOKIE['pedido']))
-        {{ setcookie('pedido', serialize([]), time() + 3600) }}
-    @endif
-    <h1>Platos</h1>
+    <h1 class="title">P L A T O S</h1>
     @include('header')
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>NOMBRE</th>
-            <th>PRECIO</th>
-        </tr>
+
+    <div class="container-platos">
         @foreach ($platos as $plato)
-        <tr onmouseout="this.style.backgroundColor = 'white'" onmouseover="this.style.backgroundColor = 'lightgreen'">
-            <td>{{ $plato->id }}</td>
-            <td>{{ $plato->nombre }}</td>
-            <td>{{ $plato->precio }}</td>
-            <td>
+            <div class="plato">
+                <h2>{{ $plato->nombre }}</h2>
+                <img width="300" src={{"img/".$plato->id.".jpg"}} alt="">
+                <h4>{{ $plato->precio }} €</h4>
+                <h6>id: {{ $plato->id }}</h6>
                 <form action={{ route('addPlato',['page'=>$platos->currentPage()]) }} method="post">
                     @csrf
                     <input type="hidden" name="idPlato" value="{{ $plato->id }}">
                     <input type="hidden" name="precioPlato" value="{{ $plato->precio }}">
-                    <input type="submit" value="Añadir al carrito">
+                    <input class="añadir" type="submit" value="Añadir al carrito">
                 </form>
-                
-            </td>
-        </tr>
+            </div>
         @endforeach
-    </table>
-    {{ $platos->links() }}
-    <button onclick="location.href='/form'">FormularioCliente</button>
-
+        {{ $platos->links() }}
+    </div>
+    <div class="footer">
+        <button class="btn-pedido" onclick="location.href='/form'">Realizar pedido</button>
+        <div class="name">
+            <span>© Ristovel Ristoranti</span>
+        </div>
+    </div>
     
+    <link rel="stylesheet" href={{ asset('css/styles.css') }}>
 </body>
 </html>
